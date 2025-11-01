@@ -1,0 +1,16 @@
+# URL Rewriting for Clean URLs
+RewriteEngine On
+
+# Remove .html extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Redirect .html to clean URL
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R=301]
+
+# Home page routing
+RewriteRule ^home$ index.html [NC,L]
+RewriteRule ^$ index.html [NC,L]
+

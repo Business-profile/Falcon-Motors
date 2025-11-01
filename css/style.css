@@ -1,0 +1,588 @@
+/********** Template CSS **********/
+:root {
+    --primary: #FFF316 !important;
+    --secondary: #1A1A1A !important;
+    --light: #FFFFFF !important;
+    --dark: #000000 !important;
+    --bs-primary: #FFF316 !important;
+    --bs-secondary: #1A1A1A !important;
+    --bs-primary-rgb: 255, 243, 22 !important;
+    --bs-secondary-rgb: 26, 26, 26 !important;
+    --navbar-bg: #000000;
+    --navbar-text: #FFFFFF;
+    --navbar-hover-bg: #FFF316;
+    --navbar-hover-text: #000000;
+}
+
+/* Override Bootstrap's primary and secondary colors completely */
+.btn-primary,
+.text-primary,
+.bg-primary,
+.border-primary {
+    --bs-primary: #FFF316 !important;
+    --bs-primary-rgb: 255, 243, 22 !important;
+    color: var(--dark) !important;
+}
+
+.btn-secondary,
+.text-secondary,
+.bg-secondary,
+.border-secondary {
+    --bs-secondary: #1A1A1A !important;
+    --bs-secondary-rgb: 26, 26, 26 !important;
+}
+
+/* Force primary color classes - OVERRIDE EVERYTHING */
+.text-primary,
+a.text-primary,
+span.text-primary,
+h1.text-primary,
+h2.text-primary,
+h3.text-primary,
+h4.text-primary,
+h5.text-primary,
+h6.text-primary,
+p.text-primary,
+div.text-primary,
+small.text-primary,
+i.text-primary {
+    color: #beb506 !important;
+}
+
+.bg-primary,
+div.bg-primary,
+section.bg-primary {
+    background-color: #FFF316 !important;
+}
+
+.border-primary,
+.border-top-primary,
+.border-bottom-primary,
+.border-start-primary,
+.border-end-primary {
+    border-color: #FFF316 !important;
+}
+
+.text-secondary,
+a.text-secondary {
+    color: #1A1A1A !important;
+}
+
+.bg-secondary,
+div.bg-secondary,
+section.bg-secondary {
+    background-color: #1A1A1A !important;
+}
+
+.border-secondary {
+    border-color: #1A1A1A !important;
+}
+
+/* Override Bootstrap's spinner border */
+.spinner-border.text-primary {
+    border-color: #FFF316 !important;
+    border-right-color: transparent !important;
+}
+
+/* Override all Bootstrap utility classes */
+[class*="text-primary"] {
+    color: #FFF316 !important;
+}
+
+[class*="bg-primary"] {
+    background-color: #FFF316 !important;
+}
+
+.fw-medium {
+    font-weight: 600 !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+    background-color: #FFF316;
+    color: #000000;
+    border-color: #FFF316;
+}
+
+.back-to-top:hover {
+    background-color: #000000;
+    border: 2px solid #FFF316;
+    color: #FFF316;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.btn-primary {
+    --bs-btn-bg: #FFF316 !important;
+    --bs-btn-border-color: #FFF316 !important;
+    --bs-btn-color: #000000 !important;
+    background-color: #FFF316 !important;
+    border-color: #FFF316 !important;
+    color: #000000 !important;
+    font-weight: 600;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    --bs-btn-hover-bg: #000000 !important;
+    --bs-btn-hover-border-color: #FFF316 !important;
+    --bs-btn-hover-color: #FFF316 !important;
+    background-color: #000000 !important;
+    border-color: #FFF316 !important;
+    color: #FFF316 !important;
+}
+
+.btn-secondary {
+    --bs-btn-bg: #1A1A1A !important;
+    --bs-btn-border-color: #1A1A1A !important;
+    --bs-btn-color: #FFFFFF !important;
+    background-color: #1A1A1A !important;
+    border-color: #1A1A1A !important;
+    color: #FFFFFF !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+    --bs-btn-hover-bg: #FFF316 !important;
+    --bs-btn-hover-border-color: #FFF316 !important;
+    --bs-btn-hover-color: #000000 !important;
+    background-color: #FFF316 !important;
+    border-color: #FFF316 !important;
+    color: #000000 !important;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 2px;
+}
+
+
+/*** Navbar ***/
+.navbar {
+    background-color: #000000 !important;
+    border-bottom: 2px solid #FFF316 !important;
+}
+
+.navbar-brand h1,
+.navbar-brand h2 {
+    color: #FFF316 !important;
+}
+
+.navbar-toggler {
+    border-color: #FFF316 !important;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FFF316' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #FFFFFF !important;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 15px;
+    outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    background-color: #FFF316 !important;
+    color: #000000 !important;
+    border-radius: 5px;
+}
+
+/* Dropdown menu styling for black navbar */
+.navbar-light .dropdown-menu {
+    background-color: #1A1A1A !important;
+    border: 1px solid #FFF316 !important;
+}
+
+.navbar-light .dropdown-menu .dropdown-item {
+    color: #FFFFFF !important;
+}
+
+.navbar-light .dropdown-menu .dropdown-item:hover,
+.navbar-light .dropdown-menu .dropdown-item.active {
+    background-color: #FFF316 !important;
+    color: #000000 !important;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-light .navbar-nav {
+        border-top: 1px solid rgba(255, 243, 22, 0.3);
+    }
+}
+
+.navbar-light .navbar-brand,
+.navbar-light a.btn {
+    height: 75px;
+}
+
+.navbar-light.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: 1px solid #FFF316 !important;
+        background-color: #1A1A1A !important;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+
+/*** Header ***/
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+@media (max-width: 768px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 450px;
+    }
+    
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.page-header {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-header-inner {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--light);
+}
+
+
+/*** Facts ***/
+.fact {
+    background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url(../img/car-repair-maintenance-theme-mechanic-uniform-working-auto-service.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*** Service ***/
+.service .nav .nav-link {
+    background: #1A1A1A;
+    color: #FFFFFF !important;
+    transition: .5s;
+}
+
+.service .nav .nav-link h4 {
+    color: #FFFFFF !important;
+}
+
+.service .nav .nav-link:hover {
+    background: #FFF316 !important;
+    color: #000000 !important;
+}
+
+.service .nav .nav-link:hover h4 {
+    color: #000000 !important;
+}
+
+.service .nav .nav-link.active {
+    background: var(--primary);
+    color: var(--dark);
+}
+
+.service .nav .nav-link.active h4 {
+    color: var(--dark) !important;
+}
+
+
+/*** Booking ***/
+.booking {
+    background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url(../img/carousel-bg-2.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.bootstrap-datetimepicker-widget.bottom {
+    top: auto !important;
+}
+
+.bootstrap-datetimepicker-widget .table * {
+    border-bottom-width: 0px;
+}
+
+.bootstrap-datetimepicker-widget .table th {
+    font-weight: 500;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+    background: var(--primary);
+    color: var(--dark);
+}
+
+.bootstrap-datetimepicker-widget table td.today::before {
+    border-bottom-color: var(--primary);
+}
+
+
+/*** Team ***/
+.team-item .team-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    transform: scale(0);
+    transition: .5s;
+}
+
+.team-item:hover .team-overlay {
+    transform: scale(1);
+}
+
+.team-item .team-overlay .btn {
+    color: var(--dark);
+    background: #FFFFFF;
+    border-color: var(--dark);
+}
+
+.team-item .team-overlay .btn:hover {
+    color: var(--primary);
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+
+/*** Testimonial ***/
+.testimonial-carousel .owl-item .testimonial-text,
+.testimonial-carousel .owl-item.center .testimonial-text * {
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text {
+    background: var(--primary) !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text * {
+    color: var(--dark) !important;
+}
+
+.testimonial-carousel .owl-dots {
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #CCCCCC;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+
+/*** Footer ***/
+.footer {
+    background: linear-gradient(rgba(0, 0, 0, .95), rgba(0, 0, 0, .95)), url(../img/car-repair-maintenance-theme-mechanic-uniform-working-auto-service.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--dark);
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--light);
+}
+
+.footer .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .3);
+}
+
+.footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+
+/* Founder Tribute Section Styling */
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.bg-primary.text-dark {
+    background-color: #FFF316 !important;
+    color: #000000 !important;
+}
