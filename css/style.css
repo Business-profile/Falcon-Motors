@@ -361,7 +361,7 @@ section.bg-secondary {
 
 /*** Facts ***/
 .fact {
-    background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url(../img/car-repair-maintenance-theme-mechanic-uniform-working-auto-service.jpg);
+    background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url(../img/img/carousel-bg-1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -498,7 +498,7 @@ section.bg-secondary {
 
 /*** Footer ***/
 .footer {
-    background: linear-gradient(rgba(0, 0, 0, .95), rgba(0, 0, 0, .95)), url(../img/car-repair-maintenance-theme-mechanic-uniform-working-auto-service.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .95), rgba(0, 0, 0, .95)), url(../img/img/carousel-bg-1.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -585,4 +585,66 @@ section.bg-secondary {
 .bg-primary.text-dark {
     background-color: #FFF316 !important;
     color: #000000 !important;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    animation: whatsapp-pulse 2s infinite;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float i {
+    color: #FFF;
+    margin-top: 0;
+}
+
+.whatsapp-float:hover {
+    background-color: #20BA5A;
+    transform: scale(1.1);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+.whatsapp-float:hover i {
+    color: #FFF;
+}
+
+/* WhatsApp Pulse Animation */
+@keyframes whatsapp-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Responsive WhatsApp Button */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+        bottom: 20px;
+        right: 20px;
+    }
 }

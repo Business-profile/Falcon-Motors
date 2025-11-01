@@ -64,7 +64,7 @@ carserv-1.0.0/
 │   └── main.js                 # JavaScript functionality and animations
 ├── img/
 │   ├── Falcon-motors.jpg       # Brand logo
-│   ├── car-repair-maintenance-theme-mechanic-uniform-working-auto-service.jpg       # Carousel background
+│   ├── img/carousel-bg-1.jpg       # Carousel background
 │   ├── carousel-bg-2.jpg       # Additional background
 │   ├── service-*.jpg           # Service images
 │   ├── team-*.jpg              # Team member photos

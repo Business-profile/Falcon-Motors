@@ -58,13 +58,11 @@
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+012 345 6789</small>
+                    <small><a href="tel:9549786007" style="color: inherit; text-decoration: none;">9549-786-007</a></small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.instagram.com/falconmotorskota" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href="https://www.youtube.com/@FalconMotors" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
         </div>
@@ -97,7 +95,7 @@
 
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/car-repair-maintenance-theme-mechanic-uniform-working-auto-service.jpg);">
+    <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/img/carousel-bg-1.jpg);">
         <div class="container-fluid page-header-inner py-5">
             <div class="container text-center">
                 <h1 class="display-3 text-white mb-3 animated slideInDown">Booking</h1>
@@ -156,64 +154,61 @@
                 
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="bg-light p-5" style="border-radius: 10px;">
-                        <form>
+                        <form action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="4bb0f830-787e-4e0a-91a6-1f3c493ee9cc">
                             <div class="row g-3">
                                 <div class="col-12">
                                     <h4 class="mb-4">Fill Your Details</h4>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                                         <label for="name">Your Name</label>
-                                    </div>
+            </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="phone" placeholder="Phone Number">
+                                        <input type="tel" name="phone" class="form-control" id="phone" placeholder="Phone Number" required>
                                         <label for="phone">Phone Number</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="vehicle" placeholder="Vehicle Model">
+                                        <input type="text" name="vehicle" class="form-control" id="vehicle" placeholder="Vehicle Model">
                                         <label for="vehicle">Vehicle Model</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating date" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" id="date" placeholder="Select Date" data-target="#date" data-toggle="datetimepicker" />
+                                        <input type="text" name="preferred_date" class="form-control datetimepicker-input" id="date" placeholder="Select Date" data-target="#date" data-toggle="datetimepicker" />
                                         <label for="date">Preferred Date</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating time" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" id="time" placeholder="Select Time" data-target="#time" data-toggle="datetimepicker" />
+                                        <input type="text" name="preferred_time" class="form-control datetimepicker-input" id="time" placeholder="Select Time" data-target="#time" data-toggle="datetimepicker" />
                                         <label for="time">Preferred Time</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <select class="form-select" id="service">
-                                            <option selected>Select A Service</option>
-                                            <option value="1">Oil Change</option>
-                                            <option value="2">Engine Repair</option>
-                                            <option value="3">General Service</option>
-                                            <option value="4">Brake Service</option>
-                                            <option value="5">AC Repair</option>
-                                            <option value="6">Custom Work</option>
+                                        <select name="service" class="form-select" id="service" required>
+                                        <option value="" selected>Select A Service</option>
+                                        <option value="Diagnostic Test">Diagnostic Test</option>
+                                        <option value="Engine Servicing">Engine Servicing</option>
+                                        <option value="Tires Replacement">Tires Replacement</option>
+                                        <option value="Oil Changing">Oil Changing</option>
+                                        <option value="Brake Service">Brake Service</option>
+                                        <option value="Car AC Repair">Car AC Repair</option>
+                                        <option value="Wheel Alignment">Wheel Alignment</option>
+                                        <option value="Battery Replacement">Battery Replacement</option>
                                         </select>
                                         <label for="service">Service Type</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Special Request" id="message" style="height: 100px"></textarea>
+                                        <textarea name="special_request" class="form-control" placeholder="Special Request" id="message" style="height: 100px"></textarea>
                                         <label for="message">Special Request</label>
                                     </div>
                                 </div>
@@ -387,13 +382,12 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Address</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Falcon Motors, Akashwani Road, Gaytri Vihar, Kota, Rajasthan 324001</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@falconmotors.com</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a href="tel:9549786007" style="color: inherit; text-decoration: none;">9549-786-007</a></p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i><a href="mailto:info@falconmotors.com" style="color: inherit; text-decoration: none;">info@falconmotors.com</a></p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/falconmotorskota" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@FalconMotors" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://wa.me/919549786007" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -405,11 +399,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Services</h4>
-                    <a class="btn btn-link" href="">Diagnostic Test</a>
-                    <a class="btn btn-link" href="">Engine Servicing</a>
-                    <a class="btn btn-link" href="">Tires Replacement</a>
-                    <a class="btn btn-link" href="">Oil Changing</a>
-                    <a class="btn btn-link" href="">Vacuam Cleaning</a>
+                    <a class="btn btn-link" href="service.html#tab-pane-1">Diagnostic Test</a>
+                    <a class="btn btn-link" href="service.html#tab-pane-2">Engine Servicing</a>
+                    <a class="btn btn-link" href="service.html#tab-pane-3">Tires Replacement</a>
+                    <a class="btn btn-link" href="service.html#tab-pane-4">Oil Changing</a>
+                    <a class="btn btn-link" href="service.html">All Services</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Newsletter</h4>
